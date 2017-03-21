@@ -61,7 +61,9 @@ public final class CardGenerator {
 			do{
 				indexContexte = ThreadLocalRandom.current().nextInt(0, Data.keysContextes.size());
 				card.maitrise[2] = Data.keysContextes.get(indexContexte);
-			} while (!Data.mapEffets.get(card.maitrise[3]).needValue && !card.maitrise[2].equals("Contrecoup"));
+			} while (!Data.mapEffets.get(card.maitrise[3]).needValue && !card.maitrise[2].equals("Contrecoup")
+					|| (card.maitrise[3].equals("Stop Talent") 
+							|| card.maitrise[3].equals("Copie Talent")) && card.maitrise[2].equals("Contrecoup"));
 		} else {
 			card.maitrise[2] = "";
 		}

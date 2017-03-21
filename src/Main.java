@@ -25,10 +25,10 @@ public class Main {
 			min = Double.parseDouble(s);
 		}
 		
-		System.out.print("Fitness max (25 par défaut): ");
+		System.out.print("Fitness max (23 par défaut): ");
 		s = scan.nextLine();
 		if(s.equals("")){
-			max = 25;
+			max = 23;
 		} else {
 			max = Double.parseDouble(s);
 		}

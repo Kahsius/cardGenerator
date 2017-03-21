@@ -23,7 +23,7 @@ public class Data {
 		mapEffets.put("-R", new Effet("-R", true, true, false, 2.5));
 		mapEffets.put("Stop Talent", new Effet("Stop Talent", false, false, true, 5));
 		mapEffets.put("Stop Maîtrise", new Effet("Stop Maîtrise", false, false, true, 4));
-		mapEffets.put("Fatigue", new Effet("Fatigue", false, true, true, 1.5));
+		mapEffets.put("Fatigue", new Effet("Fatigue", false, true, true, 2));
 		mapEffets.put("Récupération", new Effet("Récupération", true, true, false, 5));
 		mapEffets.put("Protection", new Effet("Protection", false, false, true, 4));
 		mapEffets.put("Copie Technique", new Effet("Copie Technique", false, false, true, 3));
