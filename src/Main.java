@@ -43,7 +43,10 @@ public class Main {
 				fitness = c.getFitness();
 				fitTalent = c.getFitnessTalent();
 				fitMaitrise = c.getFitnessMaitrise();
-			} while(fitness > max || fitness < min || fitMaitrise < 0 || Math.abs(fitMaitrise/fitTalent) < maiSurTal);
+			} while(fitness > max 
+					|| fitness < min 
+					|| fitMaitrise < 0 
+					|| Math.abs(fitTalent/fitMaitrise) > 1/maiSurTal && fitMaitrise > 0);
 			System.out.println(String.format("%01.1f", fitness) + " | " + c.toString());
 		}
 		

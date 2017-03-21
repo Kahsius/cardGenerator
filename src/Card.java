@@ -67,7 +67,7 @@ public class Card {
 				if(i == 2) strMaitrise = strMaitrise+ ": "; 
 			}
 		}
-		str = this.technique + " " + this.domination + " | " + strTalent + " / " + strMaitrise;
+		str = this.technique + " " + this.domination + " | " + strTalent + "/ " + strMaitrise;
 		return str;
 	}
 }

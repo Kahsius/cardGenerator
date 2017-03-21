@@ -33,6 +33,7 @@ public class Data {
 		mapEffets.put("Oppression", new Effet("Oppression", true, true, 6));
 		mapEffets.put("Pillage", new Effet("Pillage", true, true, 8));
 		mapEffets.put("Initiative", new Effet("Initiative", false, false, 6));
+		mapEffets.put("--", new Effet("--", true, false, 0));
 		keysEffets = new ArrayList<String>(mapEffets.keySet());
 		
 		mapContextes.put("Patience", new Modifiers("Patience", 3 ));

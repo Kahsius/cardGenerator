@@ -17,13 +17,13 @@ public final class CardGenerator {
 		// Generation du talent
 		indexEffet = ThreadLocalRandom.current().nextInt(0, Data.keysEffets.size());
 		card.talent[3] = Data.keysEffets.get(indexEffet);
-		if(ThreadLocalRandom.current().nextDouble() < pCout){
+		if(ThreadLocalRandom.current().nextDouble() < pCout && !card.talent[3].equals("--")){
 			indexCout = ThreadLocalRandom.current().nextInt(0, Data.keysCout.size());
 			card.talent[0] = Data.keysCout.get(indexCout);
 		} else {
 			card.talent[0] = "";
 		}
-		if(ThreadLocalRandom.current().nextDouble() < pContexte){
+		if(ThreadLocalRandom.current().nextDouble() < pContexte && !card.talent[3].equals("--")){
 			do{
 				indexContexte = ThreadLocalRandom.current().nextInt(0, Data.keysContextes.size());
 				card.talent[2] = Data.keysContextes.get(indexContexte);
@@ -31,7 +31,7 @@ public final class CardGenerator {
 		} else {
 			card.talent[2] = "";
 		}
-		if(ThreadLocalRandom.current().nextDouble() < pCondition){
+		if(ThreadLocalRandom.current().nextDouble() < pCondition && !card.talent[3].equals("--")){
 			e = Data.mapEffets.get(card.talent[3]);
 			do {
 				indexCondition = ThreadLocalRandom.current().nextInt(0, Data.keysConditions.size());
@@ -45,20 +45,20 @@ public final class CardGenerator {
 			card.talent[4] = ThreadLocalRandom.current().nextInt(1,4) + "";
 		} else {
 			card.talent[4] = "";
-		}
+		}	
 		
 		// Generation de la maitrise
 		do{
 			indexEffet = ThreadLocalRandom.current().nextInt(0, Data.keysEffets.size());
 		}while(!Data.mapEffets.get(Data.keysEffets.get(indexEffet)).isMaitrisable);
 		card.maitrise[3] = Data.keysEffets.get(indexEffet);
-		if(ThreadLocalRandom.current().nextDouble() < pCout){
+		if(ThreadLocalRandom.current().nextDouble() < pCout && !card.maitrise[3].equals("--")){
 			indexCout = ThreadLocalRandom.current().nextInt(0, Data.keysCout.size());
 			card.maitrise[0] = Data.keysCout.get(indexCout);
 		} else {
 			card.maitrise[0] = "";
 		}
-		if(ThreadLocalRandom.current().nextDouble() < pContexte){
+		if(ThreadLocalRandom.current().nextDouble() < pContexte && !card.maitrise[3].equals("--")){
 			do{
 				indexContexte = ThreadLocalRandom.current().nextInt(0, Data.keysContextes.size());
 				card.maitrise[2] = Data.keysContextes.get(indexContexte);
@@ -66,7 +66,7 @@ public final class CardGenerator {
 		} else {
 			card.maitrise[2] = "";
 		}
-		if(ThreadLocalRandom.current().nextDouble() < pCondition){
+		if(ThreadLocalRandom.current().nextDouble() < pCondition && !card.maitrise[3].equals("--")){
 			do{
 				indexCondition = ThreadLocalRandom.current().nextInt(0, Data.keysConditions.size());
 				card.maitrise[1] = Data.keysConditions.get(indexCondition);
