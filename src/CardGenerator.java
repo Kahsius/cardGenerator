@@ -32,11 +32,10 @@ public final class CardGenerator {
 			card.talent[2] = "";
 		}
 		if(ThreadLocalRandom.current().nextDouble() < pCondition && !card.talent[3].equals("--")){
-			e = Data.mapEffets.get(card.talent[3]);
 			do {
 				indexCondition = ThreadLocalRandom.current().nextInt(0, Data.keysConditions.size());
 				card.talent[1] = Data.keysConditions.get(indexCondition);
-			} while ((!e.needValue || !e.isMaitrisable && e.needValue) &&
+			} while (Data.mapEffets.get(card.talent[3]).modifFight &&
 					(card.talent[1].equals("Victoire") || card.talent[1].equals("Défaite")));
 		} else {
 			card.talent[1] = "";
