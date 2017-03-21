@@ -56,18 +56,26 @@ public class Card {
 	
 	public String toString(){
 		String str = "", strTalent = "", strMaitrise = "";
-		int i;
+		int i, l;
 		for(i = 0; i < 5; i++){
 			if(!talent[i].equals("")){
-				strTalent = strTalent + this.talent[i] + " ";
+				strTalent += this.talent[i] + " ";
 				if(i == 2) strTalent = strTalent + ": "; 
 			}
 			if(!maitrise[i].equals("")){
-				strMaitrise = strMaitrise + this.maitrise[i] + " ";
+				strMaitrise += this.maitrise[i] + " ";
 				if(i == 2) strMaitrise = strMaitrise+ ": "; 
 			}
 		}
-		str = this.technique + " " + this.domination + " | " + strTalent + "/ " + strMaitrise;
+		l = strTalent.length();
+		for(i = 0; i < 44 - l; i++){
+			strTalent += "-";
+		}
+		l = strMaitrise.length();
+		for(i = 0; i < 44 - l; i++){
+			strMaitrise += "-";
+		}
+		str = this.technique + " " + this.domination + " | " + strTalent + "| " + strMaitrise;
 		return str;
 	}
 }

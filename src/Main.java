@@ -34,8 +34,13 @@ public class Main {
 		}
 		
 		System.out.println("");
-		System.out.println("Fitn | T D | Talent / Maitrise");
-		System.out.println("-----+-----+------------------");
+		System.out.println("Fitn | T D | Talent                                      | Maitrise");
+		s = "=====+=====+";
+		for(int i = 0; i < 91; i++){
+			if(i == 45) s += "+";
+			else s += "=";
+		}
+		System.out.println(s);
 		
 		for(int i = 0; i < n; i++) {
 			do {

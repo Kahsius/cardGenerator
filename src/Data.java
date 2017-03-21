@@ -11,16 +11,17 @@ public class Data {
 	public static List<String> keysConditions;
 	public static HashMap<String, Modifiers> mapCout = new HashMap<String, Modifiers>();
 	public static List<String> keysCout;
-	public static double costTechnique = 1.5;
-	public static double costDomination = 2.5;
+	
+	public static double costTechnique = 1.3;
+	public static double costDomination = 2.2;
 	
 	public Data(){
-		mapEffets.put("+D", new Effet("+D", true, true, true, 2.5));
-		mapEffets.put("-D", new Effet("-D", true, true, true, 2.5));
-		mapEffets.put("+T", new Effet("+T", false, true, true, 1));
-		mapEffets.put("-T", new Effet("-T", false, true, true, 1));
+		mapEffets.put("+D", new Effet("+D", true, true, true, 2.2));
+		mapEffets.put("-D", new Effet("-D", true, true, true, 2.2));
+		mapEffets.put("+T", new Effet("+T", false, true, true, 1.3));
+		mapEffets.put("-T", new Effet("-T", false, true, true, 1.3));
 		mapEffets.put("+R", new Effet("+R", true, true, false, 2));
-		mapEffets.put("-R", new Effet("-R", true, true, false, 2.5));
+		mapEffets.put("-R", new Effet("-R", true, true, false, 2.2));
 		mapEffets.put("Stop Talent", new Effet("Stop Talent", false, false, true, 5));
 		mapEffets.put("Stop Maîtrise", new Effet("Stop Maîtrise", false, false, true, 4));
 		mapEffets.put("Fatigue", new Effet("Fatigue", false, true, true, 2));
@@ -40,12 +41,13 @@ public class Data {
 		mapContextes.put("Acharnement", new Modifiers("Acharnement", 3));
 		mapContextes.put("Contrecoup", new Modifiers("Contrecoup", -1));
 		mapContextes.put("par Glyphe", new Modifiers("par Glyphe", 3));
+		mapContextes.put("", new Modifiers("", 1));
 		keysContextes = new ArrayList<String>(mapContextes.keySet());
 		
 		mapConditions.put("Courage", new Modifiers("Courage", 0.8));
 		mapConditions.put("Riposte", new Modifiers("Riposte", 0.8));
 		mapConditions.put("Victoire", new Modifiers("Victoire", 0.8));
-		mapConditions.put("Défaite", new Modifiers("Défaite", 0.8));
+		mapConditions.put("Défaite", new Modifiers("Défaite", 0.9));
 		keysConditions = new ArrayList<String>(mapConditions.keySet());
 		
 		mapCout.put("Sacrifice", new Modifiers("Sacrifice", 0.6));
