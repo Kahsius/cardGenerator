@@ -68,9 +68,10 @@ public class Card {
 			}
 		}
 		l = strTalent.length();
-		for(i = 0; i < 44 - l; i++){
+		for(i = 0; i < 43 - l; i++){
 			strTalent += "-";
 		}
+		strTalent += " ";
 		l = strMaitrise.length();
 		for(i = 0; i < 44 - l; i++){
 			strMaitrise += "-";

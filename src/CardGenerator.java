@@ -1,7 +1,7 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 public final class CardGenerator {
-	private static final double pCondition = .3;
+	private static final double pCondition = .2;
 	private static final double pContexte = .3;
 	private static final double pCout = .1;
 	private static final double pEmpty = .1;
